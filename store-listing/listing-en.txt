@@ -1,0 +1,136 @@
+Bookmark Vault — Chrome Web Store listing (paste-ready)
+=======================================================
+
+
+SHORT DESCRIPTION (max 132 characters)
+--------------------------------------
+Protect one bookmark folder with a password and keep an encrypted backup in your own Google Drive or on your device.
+
+
+DETAILED DESCRIPTION (Store Listing > Description)
+--------------------------------------------------
+Protect a Chrome bookmark folder with a password.
+
+Lock & Hide
+-----------
+Press "Lock & Hide" to:
+1. serialize the folder tree
+2. encrypt it with your password
+3. write the encrypted backup (your device or your Google Drive)
+4. verify that the backup was really saved
+5. only then delete the folder from your bookmarks
+
+Nothing is removed before the backup has been read back and
+verified.
+
+Unlock & Show
+-------------
+Press "Unlock & Show" to download the latest backup, decrypt it
+and recreate the folder in its original position. If a folder
+with the same name is already there, the bookmarks are merged
+into it instead of replacing it.
+
+Your password is never stored
+-----------------------------
+Only a small encrypted verifier is saved, and it cannot be used
+to recover the password. Locking, unlocking and changing the
+password all work offline.
+
+Encrypted backups
+-----------------
+- AES-256-GCM, key derived with PBKDF2-SHA256 (600,000
+  iterations)
+- keep the last 3 backups, older ones are removed automatically
+- storage on your device, or in your own Google Drive folder
+  (the extension only ever sees the files it created)
+- export a backup as a file, import it on another computer
+
+Also included
+-------------
+- change the protected folder at any time
+- ask to lock the vault when the browser starts
+- warning before closing the tab while the vault is unlocked
+- works with large folders (hundreds of subfolders)
+
+Privacy
+-------
+No account, no tracking, no analytics, no ads, no developer
+server. Your bookmarks are encrypted on your device and only
+stored in your own Google Drive (if you choose that option).
+
+Free to use, including for commercial purposes. Provided "as
+is", without warranty.
+
+Requires Chrome 120 or newer.
+
+
+CATEGORY
+--------
+Tools  (or "Productivity")
+
+
+LANGUAGE
+--------
+First language: English (the extension interface is in English).
+Italian description can be added as a second language.
+
+
+SCREENSHOTS (minimum 1, recommended 3-5; 1280x800 or 640x400)
+--------------------------------------------------------------
+1. Initial setup: folder selector + password fields
+2. Dashboard after configuration (storage, password, backups)
+3. Lock & Hide working overlay, then the "hidden" state
+4. Unlock & Show dialog asking for the password
+5. Backup storage dialog (Local / Google Drive) and the backup
+   list with Export / Import
+
+Take them in light mode (and one in dark mode if you like).
+
+
+SINGLE PURPOSE (Privacy tab)
+----------------------------
+"Protects one Chrome bookmark folder with a password by
+encrypting it and storing an encrypted backup, locally or in the
+user's own Google Drive, and restores it on request."
+
+
+PERMISSION JUSTIFICATIONS (Privacy tab)
+---------------------------------------
+bookmarks
+  Reads the protected folder to encrypt it, and recreates it
+  when unlocking. Without it the extension cannot hide or
+  restore bookmarks.
+
+storage
+  Stores the configuration, the password verifier and the list
+  of backups on the user's device.
+
+downloads
+  Exports an encrypted backup file to the user's computer when
+  the user presses "Export backup".
+
+identity
+  Authorizes access to the user's own Google Drive so the
+  encrypted backup can be stored there.
+
+unlimitedStorage
+  Encrypted backups are small, but the local quota of 10 MB can
+  be exceeded by users with many backups or large bookmark
+  trees.
+
+
+PRIVACY FIELDS (Privacy tab) — data handling
+--------------------------------------------
+Remote data types:  None (the developer has no server).
+
+Local data:  Website content (bookmarks) — read from Chrome,
+processed and encrypted on the device, stored in local
+extension storage and/or in the user's own Google Drive.
+
+Is data transmitted off device?  Yes — only encrypted backups to
+the user's own Google Drive, and only if the user enables that
+option. No data is transmitted to the developer.
+
+Is data shared with third parties?  No.
+
+Privacy policy URL:  <URL of the GitHub Pages page>

@@ -1,0 +1,7 @@
+# packaged extensions
+*.zip
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store

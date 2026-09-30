@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Vault",
+  "short_name": "Bookmark Vault",
+  "version": "1.0.0",
+  "description": "Protect a Chrome bookmark folder with a password and encrypted backups.",
+  "minimum_chrome_version": "120",
+
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "downloads",
+    "identity",
+    "unlimitedStorage"
+  ],
+
+  "oauth2": {
+    "client_id": "823984925399-lif5ce2309m2m625fsksdgoo0f62e3f6.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_title": "Bookmark Vault",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

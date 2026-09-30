@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Bookmark Vault</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+
+<main class="container">
+
+  <header>
+    <h1>Bookmark Vault</h1>
+    <p>
+      Protect a Chrome bookmark folder with a password.
+      Your password is never stored.
+    </p>
+  </header>
+
+  <section id="setup" class="card">
+
+    <h2>Initial setup</h2>
+
+    <label>
+      Folder to protect
+
+      <select id="folder"></select>
+    </label>
+
+    <label>
+      Password
+
+      <input
+        id="setupPassword"
+        type="password"
+        autocomplete="new-password"
+        minlength="12"
+      >
+    </label>
+
+    <label>
+      Confirm password
+
+      <input
+        id="setupPasswordConfirm"
+        type="password"
+        autocomplete="new-password"
+        minlength="12"
+      >
+    </label>
+
+    <fieldset>
+      <legend>Backup storage</legend>
+
+      <label class="radio">
+        <input
+          type="radio"
+          name="storage"
+          value="drive"
+          checked
+        >
+        Google Drive (recommended)
+      </label>
+
+      <label class="radio">
+        <input
+          type="radio"
+          name="storage"
+          value="local"
+        >
+        Local storage
+      </label>
+    </fieldset>
+
+    <button id="configure">
+      Configure Bookmark Vault
+    </button>
+
+  </section>
+
+
+  <section id="dashboard"
+           class="card hidden">
+
+    <div class="status-row">
+      <div>
+        <h2>Protected folder</h2>
+        <div id="folderName"></div>
+      </div>
+
+      <div id="statusBadge"></div>
+    </div>
+
+    <div class="actions">
+
+      <button
+        id="hide"
+        class="danger"
+      >
+        Lock &amp; Hide
+      </button>
+
+      <button
+        id="show"
+        class="success"
+      >
+        Unlock &amp; Show
+      </button>
+
+    </div>
+
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        id="askLockOnClose"
+      >
+      Ask for locking on browser closing
+    </label>
+
+  </section>
+
+
+  <section id="folderSection"
+           class="card hidden">
+
+    <h2>Change protected folder</h2>
+
+    <p>
+      <strong>Current:</strong>
+      <span id="folderChangeCurrent"></span>
+    </p>
+
+    <label>
+      New folder to protect
+
+      <select id="folderChange"></select>
+    </label>
+
+    <label>
+      Password
+
+      <input
+        id="folderChangePassword"
+        type="password"
+        autocomplete="current-password"
+      >
+    </label>
+
+    <button id="changeFolderBtn">
+      Change protected folder
+    </button>
+
+  </section>
+
+
+  <section id="storageSection"
+           class="card hidden">
+
+    <h2>Backup storage</h2>
+
+    <p>
+      <strong>Current:</strong>
+      <span id="storageMode"></span>
+    </p>
+
+    <button id="changeStorage">
+      Change storage location
+    </button>
+
+    <button id="connectDrive">
+      Connect Google Drive
+    </button>
+
+    <button id="disconnectDrive">
+      Disconnect Google Drive
+    </button>
+
+  </section>
+
+
+  <section id="passwordSection"
+           class="card hidden">
+
+    <h2>Change password</h2>
+
+    <label>
+      Current password
+
+      <input
+        id="oldPassword"
+        type="password"
+        autocomplete="current-password"
+      >
+    </label>
+
+    <label>
+      New password
+
+      <input
+        id="newPassword"
+        type="password"
+        autocomplete="new-password"
+        minlength="12"
+      >
+    </label>
+
+    <label>
+      Confirm new password
+
+      <input
+        id="newPasswordConfirm"
+        type="password"
+        autocomplete="new-password"
+        minlength="12"
+      >
+    </label>
+
+    <button id="changePassword">
+      Change password
+    </button>
+
+  </section>
+
+
+  <section id="backupSection"
+           class="card hidden">
+
+    <h2>Backups</h2>
+
+    <p>
+      The extension keeps the latest three backups.
+    </p>
+
+    <div id="backups"></div>
+
+    <h3>Import backup</h3>
+
+    <input
+      id="importFile"
+      type="file"
+      accept=".bmbkp,application/octet-stream"
+    >
+
+    <label>
+      Backup password
+
+      <input
+        id="importPassword"
+        type="password"
+      >
+    </label>
+
+    <button id="import">
+      Import backup
+    </button>
+
+  </section>
+
+
+  <div
+    id="overlay"
+    class="overlay hidden"
+  >
+    <div
+      id="overlayCard"
+      class="overlay-card"
+      data-kind="success"
+    >
+
+      <div
+        id="overlaySpinner"
+        class="overlay-spinner hidden"
+      ></div>
+
+      <div
+        id="message"
+        class="overlay-text"
+      ></div>
+
+      <button id="overlayOk">OK</button>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="options.js"></script>
+
+</body>
+</html>
