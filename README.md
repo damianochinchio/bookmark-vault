@@ -58,7 +58,8 @@ Node). The store package is built without `tests/`, `docs/` and
 No account, no analytics, no developer server. Bookmark data is
 encrypted on your device and stored only in your own Google Drive
 if you enable that option. See the
-[privacy policy](docs/privacy-policy.md).
+[privacy policy](docs/privacy-policy.md)
+([published version](https://damianochinchio.github.io/bookmark-vault/privacy-policy.html)).
 
 ## License
 

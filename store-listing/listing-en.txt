@@ -133,4 +133,4 @@ option. No data is transmitted to the developer.
 
 Is data shared with third parties?  No.
 
-Privacy policy URL:  <URL of the GitHub Pages page>
+Privacy policy URL:  https://damianochinchio.github.io/bookmark-vault/privacy-policy.html
