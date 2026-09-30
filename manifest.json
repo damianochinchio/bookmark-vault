@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Bookmark Vault",
   "short_name": "Bookmark Vault",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Protect a Chrome bookmark folder with a password and encrypted backups.",
   "minimum_chrome_version": "120",
 
@@ -15,7 +15,7 @@
   ],
 
   "oauth2": {
-    "client_id": "823984925399-lif5ce2309m2m625fsksdgoo0f62e3f6.apps.googleusercontent.com",
+    "client_id": "823984925399-adjasqns55f0c0q5s9fvo2o1927o3ln8.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/drive.file"
     ]
